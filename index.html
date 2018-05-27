@@ -1,1 +1,284 @@
-<p>Hello world!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路 - PC端网页</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<style>
+
+html{color:#000;background: #fff;font-family: 'Microsoft YaHei',sans-serif,Arial;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,dt,strong{padding:0;margin:0;font-family:'Microsoft YaHei',sans-serif,Arial;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+a{text-decoration:none;color:#333;outline:none;}
+a:hover{text-decoration:underline;}
+var,em,strong{font-style:normal;}
+em,strong,th,var{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight: inherit;}
+input,button,textarea,select{* font-size:100%;}
+/*.clearfix:after{content:'\200B';clear:both;display: block;height:0px;}*/
+
+
+	/*div{border:1px solid red;}*/
+	.header{
+		border-top:7px solid #39f;min-width: 990px;
+	}
+	.header-con{
+		width:990px;
+		height: 109px;
+		margin: 0 auto;
+	}
+	.nav{
+		width:970px;
+		height: 44px;
+		margin:0 auto 20px;background: #39f;
+	}
+	.bigpic{
+		width:970px;
+		height: 260px;
+		margin:0 auto 20px;
+	}
+	.con{
+		width:974px;
+		margin:0 auto 30px;
+		height:776px;
+	}
+	.news{
+		float:left;
+		width:648px;
+		height: 774px;
+	}
+	.ads{
+		float:right;
+		width:262px;
+		height: 723px;
+		padding-top:51px;
+	}
+	.tabtit{
+		width:990px;
+		height: 42px;
+		margin:0 auto;
+	}
+	.tabcon-box{
+		background: #f4f4f4;min-width: 990px;
+	}
+	.tabcon{
+		width:990px;
+		height:350px;
+		padding-top: 40px;
+		margin:0 auto;
+	}
+	.footer-box{
+		background:#39f;min-width: 990px;
+	}
+	.footer{
+		width:990px;
+		height:165px;
+		margin:0 auto;
+		text-align: center;
+	}
+
+	.header-con h1{
+		float:left;
+		width:500px;
+		height:100%;
+		line-height: 109px;
+	}
+	.header-con a{
+		display: block;
+		height: 100%;
+		padding-left:93px;
+		font-size: 32px;
+		background: url('images/bac.png') 0 0 no-repeat;
+		text-decoration: none;
+	}
+	.header-con span{
+		float: right;
+		width:92px;
+		height:100%;
+		line-height: 109px;
+		background: url('images/bac.png') center -109px no-repeat;
+		cursor: pointer;
+	}
+	.header-con span:hover{background: url("images/bac.png") center -218px no-repeat;}
+	.nav a{
+		float:left;
+		width:16.66%;
+		height: 100%;
+		line-height: 44px;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+	}
+	.nav a:hover{background:rgba(255,255,255,.2);}
+
+	.news h3{height:24px;line-height: 24px;font-size: 18px;color:#555;}
+	.news-con dl{height: 219px;padding-top:30px;border-top:1px solid #00c;}
+	.news-con dl:first-child{border-top:0;}
+	.news-con dt{float:right;width:170px;height:170px;padding:0 20px;}
+	.news-con dt a{ display: block;height: 100%; }
+	.news-con dt img{display: block;width:164px;height:164px;border:3px solid #39f;border-radius: 50%;}
+	.news-con dd{float:left;width:405px;}
+	.news-con h2 a{overflow: hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap;display: block;height: 100%;line-height: 40px;font-size: 24px;color:#39f;}
+	.news-con div{height: 20px;font-size: 12px;color:#b3b2b2;}
+	.news-con div a{float:left;height: 100%;font-size: 14px;color:#39f;}
+	.news-con p{overflow:hidden;height: 80px;margin:9px 0;line-height: 20px;font-size: 14px;color:#666;}
+
+	.video{display: block;height:135px;margin-bottom: 2px;background: url('images/video.jpg') 0 0 no-repeat;}
+	.friendlink a{overflow:hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap;display: block;width:260px;height: 79px;margin-top:14px;border: 1px solid #dadada;text-align: center;line-height: 79px;font-size: 18px;color:#39f;}
+	.tabtit span{float: left;width: 170px;height: 42px;background: #fff;text-align: center;line-height: 42px;cursor:pointer;}
+	.tabtit .select{background: #f4f4f4;}
+	.tabcon li{float: left;width: 302px;margin-left:42px;}
+	.tabcon li:first-child{margin-left: 0}
+	.tabcon h2{height: 56px;}
+	.tabcon h2 a{overflow:hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap;display: block;height: 100%;text-align: center;line-height: 56px;color:#39f;}
+	.tabcon img{display: block;width: 100%;height: 136px;}
+	.tabcon div{height: 85px;margin-top:5px;padding: 10px 18px;background: #fbfbfb;font-size: 12px;}
+	.tabcon p{overflow:hidden;height: 54px;margin-bottom: 9px;line-height: 18px;font-family: 'SinSun';color:#666;}
+	.tabcon div a{display: block;height: 16px;font-family: 'SimSun';color:#39f;}
+
+	.copyright{padding-top: 32px;margin-bottom: 16px;font-size: 14px;font-weight: bold;}
+	.footer p a{padding: 0 7px;border-left:1px solid #fff;}
+	.footer p a:first-child{border-left:none;}
+	.footer,.footer a{color: #fff;}
+	.footer p{font-size: 12px;line-height: 20px;}
+
+	.bigpic{position: relative;}
+	.pics a img{display: block;width: 100%;height: 100%;}
+/*	.left{position: absolute;top:50%;left:24px;width:20px;height: 36px;margin-top: -18px;
+		background:url("images/picbtns.png") -20px -36px no-repeat;cursor: pointer;}
+*/	.left:hover{background: url("images/picbtns.png") 0px -36px no-repeat;}
+	/*.right{position: absolute;top:50%;left:24px;width:20px;height: 36px;margin-top: -18px;*/
+		/*background:url("images/picbtns.png") -20px 0px no-repeat;cursor:pointer;}*/
+	.right:hover{background: url("images/picbtns.png") 0px 0px no-repeat;}
+	.bigpic ul{position: absolute;left:50%;right:0;bottom:14px;width:50px;margin-left:-25px;}
+	.bigpic li{float: left;width:14px;height: 14px;margin:0 6px 0 5px;background: url("images/picbtns.png") -23px -72px no-repeat;}
+	.bigpic .now{background: url("images/picbtns.png") -23px -72px no-repeat;}
+
+
+	/*.header-con,.bigpic,.news,.ads,.tabcon{background: #ccc;}*/
+	/*.tabtit{background: #aaa;}*/
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-con">
+		<h1><a href="" title="">HTML5 布局之路 - 练习版</a></h1>
+		<span></span>
+	</div>
+</div>
+<div class="nav">
+	<a href="" title="">学习攻略</a>
+	<a href="" title="">我的收藏</a>
+	<a href="" title="">在线资源</a>
+	<a href="" title="">资源下载</a>
+	<a href="" title="">我的文章</a>
+	<a href="" title="">问题讨论</a>	
+</div>
+<div class="bigpic">
+	<div class="pics"><a href="" title=""><img src="images/banner1.jpg" alt="" title=""></a></div>
+	<span class="left"></span>
+	<span class="right"></span>
+	<ul>
+		<li class="now"></li>
+		<li></li>
+	</ul>
+</div>
+<div class="con clearfix">
+	<div class="news">
+		<h3>最新文章 \<a href="mob.html">M</d></h3>
+		<div class="news-con">
+			<dl>
+				<dt><a href="" title=""><img src="images/demo.png" alt="" title=""></a></dt>
+				<dd>
+					<h2><a href="" title="">经典的斐波那契数列与arguments...</a></h2>
+					<div>JavaScript\&nbsp;&nbsp;2016-08-15</div>
+					<p>HTML5 学堂：经典的斐波那契数列与arguments.callee.提到斐波那契数列，很多人还不是太清楚，但是如果提到兔子的繁殖这个经典题目，相信尝过计算机语言的人们会立刻感觉亲切起来。</p>
+					<div><a href="" title="">查看详情></a></div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="" title=""><img src="images/demo.png" alt="" title=""></a></dt>
+				<dd>
+					<h2><a href="" title="">经典的斐波那契数列与arguments...</a></h2>
+					<div>JavaScript\&nbsp;&nbsp;2016-08-15</div>
+					<p>HTML5 学堂：经典的斐波那契数列与arguments.callee.提到斐波那契数列，很多人还不是太清楚，但是如果提到兔子的繁殖这个经典题目，相信尝过计算机语言的人们会立刻感觉亲切起来。</p>
+					<div><a href="" title="">查看详情></a></div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="" title=""><img src="images/demo.png" alt="" title=""></a></dt>
+				<dd>
+					<h2><a href="" title="">经典的斐波那契数列与arguments...</a></h2>
+					<div>JavaScript\&nbsp;&nbsp;2016-08-15</div>
+					<p>HTML5 学堂：经典的斐波那契数列与arguments.callee.提到斐波那契数列，很多人还不是太清楚，但是如果提到兔子的繁殖这个经典题目，相信尝过计算机语言的人们会立刻感觉亲切起来。</p>
+					<div><a href="" title="">查看详情></a></div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="ads">
+		<a href="" title="" class="video"></a>
+		<div class="friendlink">
+			<a href="">优秀 HTML5 网站链接</a>
+			<a href="">优秀 HTML5 网站链接</a>
+			<a href="">优秀 HTML5 网站链接</a>
+			<a href="">优秀 HTML5 网站链接</a>
+			<a href="">优秀 HTML5 网站链接</a>
+			<a href="">优秀 HTML5 网站链接</a>
+		</div>
+	</div>
+</div>
+<div class="tabtit">
+	<span class="select">最新攻略</span>
+	<span>移动端开发攻略</span>
+	<span>开发工具攻略</span>
+</div>
+<div class="tabcon-box">
+	<ul class="tabcon">
+		<li>
+			<h2><a href="" title="">使用Git多人协作，完成项目开发</a></h2>
+			<img src="images/arcpic.jpg" alt="" title="">
+			<div>
+				<p>HTML5 学堂：关于Git的知识，我们共分成了四个大步骤进行讲解，之前我们提到了Git的安装与配置，Git在本地的使用方法，如何创建Git本地仓库与服务器端仓库的关系。</p>
+				<a href="" title="">查看详情></a>
+			</div>
+		</li>
+		<li>
+			<h2><a href="" title="">使用Git多人协作，完成项目开发</a></h2>
+			<img src="images/arcpic.jpg" alt="" title="">
+			<div>
+				<p>HTML5 学堂：关于Git的知识，我们共分成了四个大步骤进行讲解，之前我们提到了Git的安装与配置，Git在本地的使用方法，如何创建Git本地仓库与服务器端仓库的关系。</p>
+				<a href="" title="">查看详情></a>
+			</div>
+		</li>
+		<li>
+			<h2><a href="" title="">使用Git多人协作，完成项目开发</a></h2>
+			<img src="images/arcpic.jpg" alt="" title="">
+			<div>
+				<p>HTML5 学堂：关于Git的知识，我们共分成了四个大步骤进行讲解，之前我们提到了Git的安装与配置，Git在本地的使用方法，如何创建Git本地仓库与服务器端仓库的关系。</p>
+				<a href="" title="">查看详情></a>
+			</div>
+		</li>
+	</ul>
+<!-- 	<div class="tabcon">tabcon</div>
+ --></div>
+<div class="footer-box">
+	<div class="footer">
+		<div class="copyright">HTML5学堂网（<a href="" title="">www.h5course.com</a>）© 2016版权所有</div>
+		<p>
+			<a href="" title="">郑重声明</a>
+			<a href="" title="">关于HTML5学堂</a>
+			<a href="" title="">主创团队</a>
+			<a href="" title="">微信公众号</a>
+			<a href="" title="">前端人才群</a>
+			<a href="" title="">学堂技术交流群</a>
+		</p>
+		<p>备案号：XXXXXXXXXXX号</p>
+	</div>
+</div>
+</body>
+</html>
