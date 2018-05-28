@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿
 # ibox3
 
 ## Title
@@ -15,4 +15,3 @@
 * list1
 * list2
 * list3
->>>>>>> 19760416f1cb3937a10067d2e1f3ed65d623add6
