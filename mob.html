@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="wiewport" content="width=device-width,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+
+	<title>HTML5布局之路 - 移动端网页</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script src="js/zepto.js"></script>
+	<script>
+		$(function(){
+			$(window).resize(infinite);
+			function infinite(){
+				var htmlWidth=$('html').width();
+				if (htmlWidth>=1080) {
+					$('html').css({"font-size":"42px"});
+				} else {
+					$('html').css({"font-size":42/1080*htmlWidth+"px"})
+				}
+			}
+			infinite();
+		});
+	</script>
+	<style>
+html{color:#303030;background: #fff;font-family: 'Microsoft YaHei',sans-serif,Arial;}
+a{text-decoration:none;color:#666;outline:none;}
+a{-webket-tap-hightlight-color:rgba(255,0,0,0);}
+input:focus{-webkit-tap-hightlight-color:rbg(0,0,0);-webkit-user-modify:read-write-plaintext-only;}
+input[type="button"],input[type="submit"],input[type="reset"]{-webkit-appearance:none;}
+input::-ms-clear{display: none;}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,dt,strong{padding:0;margin:0;font-family:'Microsoft YaHei',sans-serif,Arial;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+var,em,strong{font-style:normal;}
+em,strong,th,var{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight: inherit;}
+input,button,textarea,select{* font-size:100%;}
+
+	html{font-size: 42px;}
+	header{position:fixed;top:0;left:0;z-index:9;width:100%;max-width:1080px;
+		height:7.86rem;box-shadow:0 0.09rem #666;}
+	.box{max-width: 1080px;padding-top: 7.86rem;}
+	.hots{padding: 0 3.7%;height: 21.9rem;}
+	.model{padding: 0 3.7%;height: 34.76rem;}
+	footer{height: 3.45rem;}
+	
+/*	header,.model:nth-of-type(1),footer{background: #ccc;}
+	.hots,.model:nth-of-type(2){background: #e9e9e9;}
+*/
+	.hots>div{height: 2.9rem;padding: 1rem 0 0 10.5%;font-size:1.43rem;color: #f62828;line-height: 2.9rem;background: url('images/hots.png') .36rem .36rem no-repeat;background-size: 1.31rem 1.43rem;}
+	.hots li{border-bottom: .14rem dotted #666;}
+	.hots li:last-child{border-bottom: .14rem dotted #fff;}
+	.hots li a{position: relative;display: block;height: 100%;padding: 0 15.6% 0 10.8%;}
+	.hots li a:before{content:'\200B';position: absolute;top:3.86rem;left:2.8%;width:3%;height: .71rem;background: #666;border-radius: 50%;}
+	.hots li a:after{content:'\200B';position: absolute;top:0;right:0;width:15.6%;height: 100%;
+		background:url("images/more.png") 2.14rem 1.71rem no-repeat;background-size: .6rem .95rem;}
+	.hots h2{overflow: hidden;text-overflow: ellipsis;word-break: keep-all;white-space: nowrap;height: 2.67rem;padding-top:.29rem;font-size: 1.33rem;font-weight: bold;line-height: 2.67rem;}
+	.hots p{overflow: hidden;height: 2.38rem;line-height: 1.19rem;}
+	.hots li div{height: 1rem;margin:1rem 0 1.38rem;padding-left:9.1%;line-height: 1rem;background: url("images/love.png") 0 0 no-repeat;background-size: 1rem 1rem;}
+
+	.model h2 a{position: relative;display: block;height: 3.57rem;padding: .31rem 15.6% 0 10.8%;line-height: 3.57rem;font-size: 1.43rem;font-weight: bold;color:#333;}
+	.model h2 a:before{content:'\200B';position: absolute;top:1.19rem;left:1%;width:6.6%;height:1.71rem;background: url("images/model.png") 0 0 no-repeat;background-size: 1.57rem 1.71rem;}
+	.model h2 a:after{content:'\200B';position: absolute;top:0;right:0;width:3.71rem;height: 100%;
+		background:url("images/more.png") 2.14rem 1.71rem no-repeat;background-size: .6rem .95rem;}
+	.model p{overflow: hidden;height: 4.29rem;margin-top:.14rem;padding: 0 4.4% 0 2.2%;line-height: 1.43rem;color: #666;}
+	.model div{height: 13.81rem;margin:1.07rem 3.6% .24rem 1.4%;border: .1rem solid #000;}
+	.model img{display: block;width: 100%;height: 100%;}
+	.model ol{padding: 0 5% 0 3.3%;}
+	.model li{border-bottom: .14rem dotted #999;}
+	.model li:last-child{border:none;}
+	.model li a{overflow: hidden;text-overflow: ellipsis;word-break: keep-all;white-space: nowrap;display: block;height: 3.62rem;line-height: 3.62rem;}
+	header{background: #eee;}
+	nav{width: 97.33%;height: 4.64rem;margin:0 auto;box-shadow: inset 0 -.12rem #a6a6a6;}
+	nav span{float: left;width: 11.2%;height: 2.88rem;padding:.83rem 3.52%;}
+	nav img{display: block;width: 100%;height: 100%;box-shadow: 0 0 0 .14rem #727272;border-radius: 50%}
+	nav h1{float: left;width: 60.93%;font-size:1.71rem;text-align: center;line-height: 4.64rem;}
+	nav strong{float: right;width: 18.24%;height: 4.55rem;background: url("images/menu.png") 0 0 no-repeat;background-size: 100%;}
+	.search div{padding: .38rem 2.87% .45rem 2.5%;}
+	.search input[type="text"]{float: left;width:77.1%;height: 2.12rem;border-radius: .24rem;border: .1rem solid #303030;text-height: 2.12rem;text-align: center;font-size:1.14rem;color: #303030;} 
+	.search input[type="submit"]{float:right;width:17.51%;height:2.0rem;margin-top:.1rem;padding:0;border:.1rem solid #303030;border-radius:.12rem;background:none;text-align:center;line-height:1.71rem;color:#303030;}
+	.search input[type="text"]:-webkit-input-placeholder{color:#000;}
+	footer{height: 3.45rem;text-align:center;line-height:3.45rem;}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<span><img src="images/HTML5.jpg" alt="" title=""></span>
+			<h1>HTML5 学堂</h1>
+			<strong></strong>
+		</nav>
+		<form action="" class="search" method="">
+			<div>
+				<input type="text" name="" placeholder="请输入搜索内容">
+				<input type="submit" name="" value="确认">
+			</div>
+		</form>
+	</header>
+	<div class="box">
+		<div class="hots">
+			<div><a href="index.html">热门与推荐</a></div>
+			<ul>
+				<li><a href="" title="">
+						<h2>jQuery入门</h2>
+						<p>jQuery对于开发者来说，是一个很好用的插件，需要去了解这些功能。</p>
+						<div>阅读量 125</div>
+					</a></li>
+				<li><a href="" title="">
+						<h2>jQuery入门</h2>
+						<p>jQuery对于开发者来说，是一个很好用的插件，需要去了解这些功能。</p>
+						<div>阅读量 125</div>
+					</a></li>
+			</ul>
+		
+		</div>
+		<section class="model">
+			<h2><a href="" title="">面试题精讲</a></h2>
+			<p>此处为该模块的描述信息，下图为该模块的配图，最下方为该模块的三篇最新文章，当鼠标单击模块标题或文字时能够跳转，此外行数限制为3行</p>
+			<div><img src="images/data.jpg" alt="" titl=""></div>
+			<ol>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+			</ol>
+		</section>
+		<section class="model">
+			<h2><a href="" title="">面试题精讲</a></h2>
+			<p>此处为该模块的描述信息，下图为该模块的配图，最下方为该模块的三篇最新文章，当鼠标单击模块标题或文字时能够跳转，此外行数限制为3行</p>
+			<div><img src="images/data.jpg" alt="" titl=""></div>
+			<ol>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+				<li><a href="" title="">JavaScript 面试题精讲12.25日的哦</a></li>
+			</ol>
+		</section>
+		<footer>Copyrigh (C) 2016 HTML5 学堂</footer>
+	</div>
+</div>
+</body>
+</html>

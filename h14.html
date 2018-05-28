@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路Demo</title>
+	<style>
+		body{perspective: 1500;}
+		.main{position: relative;width:200px;height:200px;margin: 100px auto;cursor: pointer;transform-style: preserve-3d;transition:2s ease 0s;}
+		.main p{position: absolute;width:200px;height:200px;text-align:center;line-height: 200px;
+			font-size: 26px;opacity:.8;}
+		.main p:nth-of-type(1){background-color: red;transform:translateZ(100px);}
+		.main p:nth-of-type(2){background-color: orange;transform:rotateX(90deg) translateZ(100px);}
+		.main p:nth-of-type(3){background-color: yellow;transform:rotateX(-90deg) translateZ(100px);}
+		.main p:nth-of-type(4){background-color: green;transform:rotateY(90deg) translateZ(100px);}
+		.main p:nth-of-type(5){background-color: skyblue;transform:rotateY(-90deg) translateZ(100px);}
+		.main p:nth-of-type(6){background-color: blue;transform:rotateY(180deg) translateZ(100px);}
+		.main:hover{transform:rotateX(45deg) rotateY(45deg);}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<p>HTML5布局之路</p>
+		<p>HTML5学堂</p>
+		<p>CSS3旋转特效</p>
+		<p>独行冰海</p>
+		<p>梦幻雪冰</p>
+		<p>学习HTML5</p>
+	</div>
+</body>
+</html>

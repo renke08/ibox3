@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5布局之路Demo</title>
+	<style>
+
+html{color:#000;background: #fff;font-family: 'Microsoft YaHei',sans-serif,Arial;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,dt,strong{padding:0;margin:0;font-family:'Microsoft YaHei',sans-serif,Arial;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+a{text-decoration:none;color:#333;outline:none;}
+a:hover{text-decoration:underline;}
+var,em,strong{font-style:normal;}
+em,strong,th,var{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight: inherit;}
+input,button,textarea,select{* font-size:100%;}
+.clearfix:after{content:'\200B';clear:both;display: block;height:0px;}
+
+
+	div{border:1px solid red;}
+		.header{
+			border-top:7px solid #39f;
+		}
+		.header-con{
+			width:990px;
+			height: 109px;
+			margin: 0 auto;
+		}
+		.nav{
+			width:970px;
+			height: 44px;
+			margin:0 auto 20px;background: #39f;
+		}
+		.bigpic{
+			width:970px;
+			height: 260px;
+			margin:0 auto 20px;
+		}
+		.con{
+			width:974px;
+			margin:0 auto 30px;
+		}
+		.news{
+			float:left;
+			width:648px;
+			height: 774px;
+		}
+		.ads{
+			float:right;
+			width:262px;
+			height: 774px;
+		}
+		.tabtit{
+			width:990px;
+			height: 42px;
+			margin:0 auto;
+		}
+		.tabcon-box{
+			background: #f4f4f4;
+		}
+		.tabcon{
+			width:990px;
+			height:390px;
+			margin:0 auto;
+		}
+		.footer-box{
+			background:#39f;
+		}
+		.footer{
+			width:990px;
+			height:165px;
+			margin:0 auto;
+		}
+
+	.header-con h1{
+		float:left;
+		width:500px;
+		height:100%;
+		line-height: 109px;
+	}
+	.header-con a{
+		display: block;
+		height: 100%;
+		padding-left:93px;
+		font-size: 32px;
+		background: url('bac.png') 0 0 no-repeat;
+	}
+	.header-con span{
+		float: right;
+		width:92px;
+		height:100%;
+	}
+
+	.header-con,.bigpic,.news,.ads,.tabcon{background: #ccc;}
+	.tabtit{background: #aaa;}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="header-con">
+		<h1><a href="" title="">HTML5 布局之路</a></h1>
+		<span></span>
+	</div>
+</div>
+<div class="nav">nav</div>
+<div class="bigpic">bigpic</div>
+<div class="con clearfix">
+	<div class="news">news</div>
+	<div class="ads">ads</div>
+</div>
+<!-- <div class="clea"></div> -->
+<!-- <br clear="all"> -->
+<div class="tabtit">tabtit</div>
+<div class="tabcon-box">
+	<div class="tabcon">tabcon</div>
+</div>
+<div class="footer-box">
+	<div class="footer">footer</div>
+</div>
+</body>
+</html>
